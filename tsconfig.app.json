@@ -1,0 +1,17 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+
+/* Added "types": ["node"] un compilerOptions for Amplify https://medium.com/@gerard.sans/build-your-first-full-stack-serverless-app-with-angular-and-aws-amplify-d2e4716de9bd#2bda */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": ["node"]
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}

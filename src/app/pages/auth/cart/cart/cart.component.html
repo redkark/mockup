@@ -1,0 +1,9 @@
+<div *ngFor="let mockTest of items">
+    <span>{{ mockTest.code }}</span>
+    <span>{{ mockTest.details.title }}</span>
+    <span>{{ mockTest.details.subTitle }}</span>
+    <span>{{ mockTest.details.price | currency }}</span>
+</div>
+<div>
+    <button mat-button (click)="checkout()">Checkout</button>
+</div>

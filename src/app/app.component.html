@@ -1,0 +1,81 @@
+<!--<div class="universe">-->
+<!-- Header Start -->
+<header>
+  <mat-toolbar color="primary">
+    <div fxFlex fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start none">
+      <div>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button routerLink="" mat-button>Home</button>
+      </div>
+      <div>
+        <button routerLink="dashboard" mat-button>Dashboard</button>
+      </div>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="end none">
+      <div *ngIf="sessionService.isAuthenticated">
+        {{ sessionService.user.attributes.given_name }}
+      </div>
+      <!--<div *ngIf="sessionService.isAuthenticated">James</div>-->
+      <div>
+        <button *ngIf="sessionService.isAuthenticated" routerLink="cart" mat-button>
+          <mat-icon aria-hidden="false" aria-label="View Cart" matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="!sessionService.isAuthenticated" >
+        <button routerLink="login" mat-button>Login</button>
+      </div>
+      <div *ngIf="sessionService.isAuthenticated">
+        <button mat-button (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>
+<!-- Header End -->
+
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #drawer class="sidenav" fixedInViewport>
+    <!-- Sidenav Start -->
+    <mat-toolbar>
+      Menu
+      <button
+        type="button"
+        aria-label="Close sidenav"
+        mat-icon-button
+        (click)="drawer.close()"
+        >
+        <mat-icon aria-label="Side nav close icon">close</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+    <!-- Sidenav End -->
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>
+  <!-- Footer Start -->
+  <footer>
+    <div>&copy; Mockup All rights reserved 2020</div>
+  </footer>
+  <!-- Footer End -->
+
+<!--</div>-->

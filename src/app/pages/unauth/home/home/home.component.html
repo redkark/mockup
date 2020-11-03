@@ -1,0 +1,23 @@
+<div fxFlex fxLayout="column">
+  <h2>Please check out our mock tests</h2>
+
+  <div fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div *ngFor="let mockTest of mockTestsMaster">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ mockTest.details.title }}</mat-card-title>
+          <mat-card-subtitle>{{ mockTest.details.subTitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="mockTest.details.imgURL" [alt]="'Logo of ' + mockTest.details.title">
+        <mat-card-content>
+          <p>{{ mockTest.details.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <span>Price {{ mockTest.details.price | currency }}</span>
+          <button *ngIf="sessionService.isAuthenticated" mat-raised-button (click)="addToCart(mockTest.code)" color="accent">Add to cart</button>
+          <button *ngIf="!sessionService.isAuthenticated" mat-raised-button (click)="showAlert()" color="accent">Add to cart</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

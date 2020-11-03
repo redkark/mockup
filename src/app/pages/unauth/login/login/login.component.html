@@ -1,0 +1,25 @@
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>User ID</mat-label>
+            <input matInput name="userID" id="userID" formControlName="userID">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="userID" id="password" formControlName="password">
+        </mat-form-field>
+    </section>
+    <section>
+        <!-- TBD need to create page for forgot password -->
+        <a routerLink="">Forgot Password</a>
+    </section>
+    
+    <section>
+        <div class="login-button-row">
+            <button type="submit" mat-raised-button color="primary">Login</button>
+            <button routerLink="signup" mat-raised-button color="accent">Sign Up</button>
+        </div>
+    </section>
+</form>

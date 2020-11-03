@@ -1,0 +1,50 @@
+<h2>Sign up</h2>
+<form class="login-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>User ID</mat-label>
+            <input matInput name="userID" id="userID" formControlName="userID">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" id="password" formControlName="password">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" name="confirmPassword" id="confirmPassword" formControlName="confirmPassword">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" id="email" formControlName="email">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>First Name</mat-label>
+            <input matInput name="firstName" id="firstName" formControlName="firstName">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput name="lastName" id="lastName" formControlName="lastName">
+        </mat-form-field>
+    </section>
+    <section>
+        <mat-form-field class="login-full-width">
+            <mat-label>Phone Number</mat-label>
+            <input matInput name="phone" id="phone" formControlName="phone">
+        </mat-form-field>
+    </section>
+    <section>
+        <div class="login-button-row">
+            <button type="submit" mat-raised-button color="accent">Sign Up</button>
+        </div>
+    </section>
+</form>

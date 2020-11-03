@@ -1,0 +1,52 @@
+/* See if the :host is required this was added so that the height property of the .content works based on code-academia youtube video */
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+/*
+.universe {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  height:100 px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+*/
+.sidenav-container {
+  height: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidenav {
+  width: 350px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.content {
+  height: 100%;
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  /*width: 100%;*/
+  background-color: lightsteelblue;
+}
+
