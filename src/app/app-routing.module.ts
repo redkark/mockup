@@ -7,6 +7,7 @@ import { SignupComponent } from './pages/unauth/signup/signup/signup.component';
 import { SignupCompleteComponent } from './pages/unauth/signup/signup-complete/signup-complete.component';
 import { DashboardComponent } from './pages/auth/dashboard/dashboard/dashboard.component';
 import { CartComponent } from './pages/auth/cart/cart/cart.component';
+import { ExamComponent } from './pages/auth/exam/exam/exam.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
   { path: "login/dashboard", component: DashboardComponent },
   { path: "cart", component: CartComponent },
+  { path: "exam", component: ExamComponent },
+  { path: "dashboard/exam", component: ExamComponent },
 ];
 
 @NgModule({

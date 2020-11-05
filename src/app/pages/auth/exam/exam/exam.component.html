@@ -1,0 +1,26 @@
+<app-question-stepper>
+    <cdk-step *ngFor="let question of mockTestQuestions; let stepIndex = index">
+        <label id="option-radio-group-label">{{ question.question }}</label>
+        <mat-radio-group
+            *ngIf="!question.multipleoption"
+            aria-labelledby="option-radio-group-label"
+            class="option-layout">
+            <!--
+            [(ngModel)]="answer">
+            -->
+            <mat-radio-button class="option-margin" *ngFor="let option of question.options" [value]="option">
+                {{option}}
+            </mat-radio-button>
+        </mat-radio-group>
+
+        <div *ngIf="question.multipleoption" class="option-layout">
+            <mat-checkbox class="option-margin"
+                *ngFor="let option of question.options">
+                <!--
+                [(ngModel)]="answer">
+                -->
+                {{ option }}
+            </mat-checkbox>
+        </div>
+    </cdk-step>
+</app-question-stepper>

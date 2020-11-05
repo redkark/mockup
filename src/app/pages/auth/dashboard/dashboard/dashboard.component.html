@@ -27,7 +27,7 @@
             <th mat-header-cell *matHeaderCellDef> Action </th>
             <td mat-cell *matCellDef="let mocktest">
                 <button mat-raised-button color="primary" *ngIf="mocktest.status === 'Completed'" routerLink="">Review Test</button>
-                <button mat-raised-button color="accent" *ngIf="mocktest.status === 'Not Completed'">Start Test</button>
+                <button mat-raised-button color="accent" *ngIf="mocktest.status === 'Not Completed'" routerLink="exam">Start Test</button>
             </td>
           </ng-container>
         

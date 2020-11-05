@@ -1,0 +1,9 @@
+.option-layout {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .option-margin {
+    margin: 5px;
+  }

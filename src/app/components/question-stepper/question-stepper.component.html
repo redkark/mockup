@@ -1,0 +1,21 @@
+<section class="exam-container">
+    <header><h2>Question {{selectedIndex + 1}}/{{steps.length}}</h2></header>
+  
+    <div [style.display]="selected ? 'block' : 'none'">
+      <!-- Content from the CdkStep is projected here -->
+      <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
+    </div>
+  
+    <footer class="exam-step-navigation-bar">
+      <button class="exam-nav-button" cdkStepperPrevious>&larr;</button>
+      <button
+        class="exam-step"
+        *ngFor="let step of steps; let i = index;"
+        [ngClass]="{'exam-active': selectedIndex === i}"
+        (click)="onClick(i)"
+      >
+        Question {{i + 1}}
+      </button>
+      <button class="exam-nav-button" cdkStepperNext>&rarr;</button>
+    </footer>
+  </section>
